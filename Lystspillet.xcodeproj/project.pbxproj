@@ -115,8 +115,6 @@
 		D49C210B1685E23C00A103F8 /* TableViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C210A1685E23C00A103F8 /* TableViewBackground.png */; };
 		D49C210D1685E27D00A103F8 /* TableViewBackgroundBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C210C1685E27D00A103F8 /* TableViewBackgroundBottom@2x.png */; };
 		D49C21111685E69800A103F8 /* AccessoryButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D49C21101685E69800A103F8 /* AccessoryButton@2x.png */; };
-		D49EADB716AC602600060E8A /* LystspilletLogov1@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D49EADB616AC602600060E8A /* LystspilletLogov1@2x~ipad.png */; };
-		D49EADB916AC602900060E8A /* LystspilletLogov1~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D49EADB816AC602900060E8A /* LystspilletLogov1~ipad.png */; };
 		D4ACE6C616713C4100DB6267 /* CoreDataImport.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D4ACE6C516713C4100DB6267 /* CoreDataImport.sqlite */; };
 		D4B84404165E8A78008E6B5B /* TableViewCellBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B84403165E8A78008E6B5B /* TableViewCellBackground@2x.png */; };
 		D4B8440D165EA3EC008E6B5B /* LSCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B8440C165EA3EC008E6B5B /* LSCategoryTableViewCell.m */; };
@@ -229,8 +227,8 @@
 		D4004F0316A4A74200470FDC /* NavBarButtonBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarButtonBack.png; sourceTree = "<group>"; };
 		D4004F0516A4A76400470FDC /* NavBarButtonBackPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarButtonBackPushed.png; sourceTree = "<group>"; };
 		D4004F0716A4A78000470FDC /* NavBarButtonPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarButtonPushed.png; sourceTree = "<group>"; };
-		D40C077916B720380052919C /* LystspilletLogo@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogo@2x~iphone.png"; sourceTree = "<group>"; };
-		D40C077B16B7203C0052919C /* LystspilletLogo~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogo~iphone.png"; sourceTree = "<group>"; };
+		D40C077916B720380052919C /* LystspilletLogo@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogo@2x~iphone.png"; sourceTree = SOURCE_ROOT; };
+		D40C077B16B7203C0052919C /* LystspilletLogo~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogo~iphone.png"; sourceTree = SOURCE_ROOT; };
 		D40CF869169048EF00F83524 /* CardShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardShadow@2x.png"; sourceTree = "<group>"; };
 		D4153BD2166158BC00C1F520 /* LSCollectionViewCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionViewCardCell.h; sourceTree = "<group>"; };
 		D4153BD3166158BC00C1F520 /* LSCollectionViewCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionViewCardCell.m; sourceTree = "<group>"; };
@@ -338,8 +336,6 @@
 		D49C210A1685E23C00A103F8 /* TableViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableViewBackground.png; sourceTree = "<group>"; };
 		D49C210C1685E27D00A103F8 /* TableViewBackgroundBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundBottom@2x.png"; sourceTree = "<group>"; };
 		D49C21101685E69800A103F8 /* AccessoryButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AccessoryButton@2x.png"; sourceTree = "<group>"; };
-		D49EADB616AC602600060E8A /* LystspilletLogov1@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogov1@2x~ipad.png"; sourceTree = SOURCE_ROOT; };
-		D49EADB816AC602900060E8A /* LystspilletLogov1~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogov1~ipad.png"; sourceTree = SOURCE_ROOT; };
 		D4ACE6C516713C4100DB6267 /* CoreDataImport.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataImport.sqlite; sourceTree = "<group>"; };
 		D4B84403165E8A78008E6B5B /* TableViewCellBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewCellBackground@2x.png"; sourceTree = "<group>"; };
 		D4B8440B165EA3EC008E6B5B /* LSCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSCategoryTableViewCell.h; path = ../LSCategoryTableViewCell.h; sourceTree = "<group>"; };
@@ -420,8 +416,8 @@
 		D4E9A285165D899B0076DF24 /* Lystspillet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lystspillet-Prefix.pch"; sourceTree = "<group>"; };
 		D4E9A286165D899B0076DF24 /* LSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSAppDelegate.h; sourceTree = "<group>"; };
 		D4E9A287165D899B0076DF24 /* LSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSAppDelegate.m; sourceTree = "<group>"; };
-		D4EAEC0B16B2B89D002B5283 /* LystspilletLogo@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogo@2x~ipad.png"; sourceTree = "<group>"; };
-		D4EAEC0E16B2B8A1002B5283 /* LystspilletLogo~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogo~ipad.png"; sourceTree = "<group>"; };
+		D4EAEC0B16B2B89D002B5283 /* LystspilletLogo@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogo@2x~ipad.png"; sourceTree = SOURCE_ROOT; };
+		D4EAEC0E16B2B8A1002B5283 /* LystspilletLogo~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LystspilletLogo~ipad.png"; sourceTree = SOURCE_ROOT; };
 		D4F58A5E1690D6F400B11F15 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		D4F58A5F1690D6F400B11F15 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		D4F58A641690D82500B11F15 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
@@ -518,8 +514,10 @@
 		D41FBA701670BE2900F23179 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				D49EADB816AC602900060E8A /* LystspilletLogov1~ipad.png */,
-				D49EADB616AC602600060E8A /* LystspilletLogov1@2x~ipad.png */,
+				D40C077B16B7203C0052919C /* LystspilletLogo~iphone.png */,
+				D40C077916B720380052919C /* LystspilletLogo@2x~iphone.png */,
+				D4EAEC0E16B2B8A1002B5283 /* LystspilletLogo~ipad.png */,
+				D4EAEC0B16B2B89D002B5283 /* LystspilletLogo@2x~ipad.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -792,10 +790,6 @@
 		D4E9A268165D899B0076DF24 = {
 			isa = PBXGroup;
 			children = (
-				D40C077B16B7203C0052919C /* LystspilletLogo~iphone.png */,
-				D40C077916B720380052919C /* LystspilletLogo@2x~iphone.png */,
-				D4EAEC0E16B2B8A1002B5283 /* LystspilletLogo~ipad.png */,
-				D4EAEC0B16B2B89D002B5283 /* LystspilletLogo@2x~ipad.png */,
 				D4E9A27D165D899B0076DF24 /* Lystspillet */,
 				D4E9A276165D899B0076DF24 /* Frameworks */,
 				D4E9A274165D899B0076DF24 /* Products */,
@@ -1024,8 +1018,6 @@
 				D4FD899016AC46CF0072BA44 /* TextViewShadowBottom@2x.png in Resources */,
 				D4FD899716AC4CA20072BA44 /* TextViewShadowTop.png in Resources */,
 				D4FD899816AC4CA20072BA44 /* TextViewShadowTop@2x.png in Resources */,
-				D49EADB716AC602600060E8A /* LystspilletLogov1@2x~ipad.png in Resources */,
-				D49EADB916AC602900060E8A /* LystspilletLogov1~ipad.png in Resources */,
 				D4BDCF6B16AD8043006894DA /* COLOURBOX1281649.png in Resources */,
 				D4BDCF6C16AD8043006894DA /* COLOURBOX1281649@2x.png in Resources */,
 				D4EAEC0C16B2B89D002B5283 /* LystspilletLogo@2x~ipad.png in Resources */,
