@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Card" representedClassName="Card" syncable="YES">
+        <attribute name="cardReference" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detailedQuestion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="didYouKnowThat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frontImageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frontText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moreInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quizAnswer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quizQuestion" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="cards" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="categoryColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frameImageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="littleDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sorting" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" inverseName="category" inverseEntity="Card" syncable="YES"/>
+    </entity>
+    <entity name="StaticText" representedClassName="StaticText" syncable="YES">
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textKey" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Card" positionX="160" positionY="192" width="128" height="193"/>
+        <element name="Category" positionX="-38" positionY="189" width="128" height="165"/>
+        <element name="StaticText" positionX="160" positionY="192" width="128" height="105"/>
+    </elements>
+</model>

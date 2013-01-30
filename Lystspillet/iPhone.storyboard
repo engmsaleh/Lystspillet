@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dO3-VZ-q4P">
+    <dependencies>
+        <development version="4500" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Category Table View Controller - Kategorier-->
+        <scene sceneID="S5R-K8-zBf">
+            <objects>
+                <tableViewController id="a5l-7x-mk2" customClass="LSCategoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vyp-Tu-VZi">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Category Cell" rowHeight="100" id="VAk-Iu-Vj7" customClass="LSCategoryTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Kærester.png" id="Gtw-Ng-CMn">
+                                            <rect key="frame" x="6" y="7" width="52" height="85"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Laq-Zn-N1i">
+                                            <rect key="frame" x="67" y="8" width="210" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.2823529541" green="0.01176470611" blue="0.55294120309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Denne kategori handler om at være kærester, både når det er allerbedst, og når forholdet bliver sat på prøve." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iLV-8j-r2n">
+                                            <rect key="frame" x="66" y="29" width="211" height="63"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aR9-dA-Hrv">
+                                            <rect key="frame" x="285" y="37" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                            <state key="normal" backgroundImage="AccessoryButton@2x.png">
+                                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="infoButtonTapped:withEvent:" destination="a5l-7x-mk2" eventType="touchUpInside" id="ULF-yp-9U3"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="categoryDescription" destination="iLV-8j-r2n" id="IBl-lp-pmu"/>
+                                    <outlet property="categoryImage" destination="Gtw-Ng-CMn" id="RKr-bU-CFk"/>
+                                    <outlet property="categoryTitle" destination="Laq-Zn-N1i" id="uhG-cs-Raz"/>
+                                    <outlet property="infoButton" destination="aR9-dA-Hrv" id="Fiv-cR-5Nc"/>
+                                    <segue destination="mVG-oP-XsN" kind="push" identifier="Category" id="Nvt-1M-AgB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="a5l-7x-mk2" id="aw0-ly-nSI"/>
+                            <outlet property="delegate" destination="a5l-7x-mk2" id="hbv-Rn-mfr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Kategorier" id="6Ux-0x-WuW"/>
+                    <connections>
+                        <segue destination="th8-Ep-ATW" kind="modal" identifier="More Info" id="FQ8-Dc-L0j"/>
+                        <segue destination="Vy9-Dl-SM7" kind="modal" identifier="About" id="Hvd-Be-pOn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAK-Ij-AED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="16"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="uaj-mu-Z5x">
+            <objects>
+                <viewController id="mVG-oP-XsN" customClass="LSCategoryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bOK-tZ-Xr8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" id="Dqm-hr-qjQ">
+                                <rect key="frame" x="20" y="107" width="280" height="280"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="bpI-xF-wzt" kind="embed" identifier="Card Container" id="qGn-05-RfG"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Jz1-Bg-A1n">
+                                <rect key="frame" x="141" y="395" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.2823529541" green="0.01176470611" blue="0.55294120309999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.39215686919999998" green="0.74901962280000001" blue="0.69019609689999994" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="83j-ch-J9V"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="cardContainer" destination="Dqm-hr-qjQ" id="hQN-gh-m4J"/>
+                        <outlet property="pageControl" destination="Jz1-Bg-A1n" id="htY-V0-Bep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wq-Qe-vTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="435"/>
+        </scene>
+        <!--Card Collection View Controller-->
+        <scene sceneID="sp4-lh-fao">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="bpI-xF-wzt" customClass="LSCardCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="8Rh-gP-TcT">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="35c-CR-n2X">
+                            <size key="itemSize" width="278" height="203"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Card Cell" id="dyf-di-qYQ" customClass="LSCollectionViewCardCell">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="38l-tV-2a5">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="dXs-jP-ElT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Frame1.png" id="3AR-qe-LP7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="CardFrameInner.png" id="Ppm-qt-PzS">
+                                                            <rect key="frame" x="48" y="53" width="549" height="389"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="CardFrameInner2.png" id="bTc-aZ-a0s">
+                                                            <rect key="frame" x="48" y="450" width="549" height="139"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" id="FhL-sZ-9ge">
+                                                            <rect key="frame" x="60" y="67" width="525" height="361"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Uddybende spørgsmål" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Owh-qA-n0i">
+                                                                    <rect key="frame" x="8" y="0.0" width="283" height="35"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="Cyn-aa-p0k">
+                                                                    <rect key="frame" x="0.0" y="26" width="512" height="39"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <string key="text">Hvordan og af hvem påvirkes vores opfattelse af os selv ?
+Hvordan kan vores kropsbillede have betydning for vores venskaber?
+Hvordan påvirker min kropsopfattelse min måde at være på?</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Quiz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="54O-AW-W2R">
+                                                                    <rect key="frame" x="8" y="90" width="172" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Er det de samme skønhedsidealer man har i alle kulturer?" id="BMK-ME-cnl">
+                                                                    <rect key="frame" x="0.0" y="117" width="512" height="26"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Svar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ngh-q1-TtK">
+                                                                    <rect key="frame" x="8" y="162" width="172" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Nej, der er meget forskel på hvad man finder attraktivt i forskellige kulturer." id="z40-ea-hFe">
+                                                                    <rect key="frame" x="0.0" y="184" width="512" height="26"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Vidste du at?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mai-04-1UQ">
+                                                                    <rect key="frame" x="8" y="234" width="172" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="P6R-RU-vfq">
+                                                                    <rect key="frame" x="0.0" y="260" width="512" height="26"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <string key="text">Når vi snakker om kropsopfattelse, handler det om hvordan vi opfatter vores krop, hvordan den opleves og ser ud. Dette billede kan være forskelligt fra andres – det kan eks. være andre synes jeg er smuk, men jeg oplever det ikke selv sådan.  Man kan altid arbejde med at udvikle ens egen kropsopfattelse.</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="A01" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i5Z-zK-IYh">
+                                                            <rect key="frame" x="550" y="589" width="42" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" id="64a-Ej-RHD">
+                                                            <rect key="frame" x="60" y="464" width="525" height="109"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Find mere info:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jT8-K3-02n">
+                                                                    <rect key="frame" x="8" y="0.0" width="283" height="35"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="Cyp-Jp-SPv">
+                                                                    <rect key="frame" x="0.0" y="26" width="512" height="73"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <string key="text">Hvordan og af hvem påvirkes vores opfattelse af os selv ?
+Hvordan kan vores kropsbillede have betydning for vores venskaber?
+Hvordan påvirker min kropsopfattelse min måde at være på?</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                                </textView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="1uO-40-gdV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" id="ygb-wQ-loe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Frame1.png" id="6lp-uL-8Lz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </imageView>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="At være sig selv" textAlignment="center" id="7ud-7w-b9I">
+                                                            <rect key="frame" x="45" y="46" width="295" height="124"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                                        </textView>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Kategori" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OGg-ly-vCf">
+                                                            <rect key="frame" x="273" y="168" width="72" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="280" height="280"/>
+                                <connections>
+                                    <outlet property="answerHeader" destination="Ngh-q1-TtK" id="CVB-lk-ORJ"/>
+                                    <outlet property="answerTextView" destination="z40-ea-hFe" id="NjG-l4-io5"/>
+                                    <outlet property="backFrame" destination="3AR-qe-LP7" id="bzU-dg-43j"/>
+                                    <outlet property="backView" destination="dXs-jP-ElT" id="HAi-f5-Vis"/>
+                                    <outlet property="cardReferenceNumber" destination="i5Z-zK-IYh" id="SmU-sO-4Pm"/>
+                                    <outlet property="cardType" destination="OGg-ly-vCf" id="Wf8-mc-cUJ"/>
+                                    <outlet property="detailedQuestionTextView" destination="Cyn-aa-p0k" id="QrT-Np-3MO"/>
+                                    <outlet property="detailedQuestionsHeader" destination="Owh-qA-n0i" id="Q2Q-qS-pzb"/>
+                                    <outlet property="didYouKnowHeader" destination="Mai-04-1UQ" id="JYG-OC-sgt"/>
+                                    <outlet property="didYouKnowTextView" destination="P6R-RU-vfq" id="cXq-mF-Ald"/>
+                                    <outlet property="frontFrame" destination="6lp-uL-8Lz" id="FSV-n9-NEH"/>
+                                    <outlet property="frontImage" destination="ygb-wQ-loe" id="Dh6-Wy-hJE"/>
+                                    <outlet property="frontTextView" destination="7ud-7w-b9I" id="M17-AH-s16"/>
+                                    <outlet property="frontView" destination="1uO-40-gdV" id="mbH-jD-lnu"/>
+                                    <outlet property="moreInfoFrame" destination="bTc-aZ-a0s" id="0TJ-hy-O2D"/>
+                                    <outlet property="moreInfoHeader" destination="jT8-K3-02n" id="EZa-us-Xj8"/>
+                                    <outlet property="moreInfoTextView" destination="Cyp-Jp-SPv" id="xow-k4-Cfc"/>
+                                    <outlet property="moreInfoView" destination="64a-Ej-RHD" id="H7m-Fj-T8m"/>
+                                    <outlet property="primaryContentFrame" destination="Ppm-qt-PzS" id="1s1-gF-5Ge"/>
+                                    <outlet property="primaryContentView" destination="FhL-sZ-9ge" id="1CF-Ed-6zN"/>
+                                    <outlet property="quizHeader" destination="54O-AW-W2R" id="4cG-5e-tBT"/>
+                                    <outlet property="quizTextView" destination="BMK-ME-cnl" id="qec-3K-70G"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="bpI-xF-wzt" id="tIH-nI-7lc"/>
+                            <outlet property="delegate" destination="bpI-xF-wzt" id="eAV-fD-3As"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="O4S-g2-y6v"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tin-DD-kzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944" y="487"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="WoJ-Rd-x4L">
+            <objects>
+                <viewController id="l08-SN-WYL" customClass="LSAboutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="grk-hZ-Bu0">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gnK-zY-c2U">
+                                <rect key="frame" x="145" y="131" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C0P-je-qpV">
+                        <barButtonItem key="rightBarButtonItem" title="OK" style="done" id="kkT-Cg-jb8">
+                            <color key="tintColor" red="0.2823529541" green="0.01176470611" blue="0.55294120309999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="done:" destination="l08-SN-WYL" id="L2F-Pp-rg4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJK-yl-Sfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="872"/>
+        </scene>
+        <!--More Info View Controller-->
+        <scene sceneID="G4h-7n-LTh">
+            <objects>
+                <viewController id="fzv-yx-i9v" customClass="LSMoreInfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RWf-rs-FTb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sPd-gc-uw2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" editable="NO" id="QZa-lG-iCn">
+                                        <rect key="frame" x="20" y="211" width="280" height="272"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Følelser.png" id="Z76-Hu-529">
+                                        <rect key="frame" x="106" y="20" width="108" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iLx-bP-iWy">
+                        <barButtonItem key="rightBarButtonItem" title="OK" style="done" id="8SR-yM-P7O">
+                            <color key="tintColor" red="0.2823529541" green="0.01176470611" blue="0.55294120309999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="done:" destination="fzv-yx-i9v" id="JHd-nj-9zC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="QZa-lG-iCn" id="2lv-2U-9FA"/>
+                        <outlet property="imageView" destination="Z76-Hu-529" id="ixS-mc-dqM"/>
+                        <outlet property="scrollView" destination="sPd-gc-uw2" id="FU5-fr-dLk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6K-Gi-9fD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="-431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OkA-X7-zuf">
+            <objects>
+                <navigationController id="dO3-VZ-q4P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PX2-Zw-0MQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a5l-7x-mk2" kind="relationship" relationship="rootViewController" id="Qsa-kJ-0gD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VKi-Ty-bvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="16"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NlQ-WW-iNP">
+            <objects>
+                <navigationController id="th8-Ep-ATW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xVs-G5-tst">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fzv-yx-i9v" kind="relationship" relationship="rootViewController" id="P3r-SD-O28"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fiw-26-45P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="-431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cI8-fT-aN3">
+            <objects>
+                <navigationController id="Vy9-Dl-SM7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mzz-sG-xMc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l08-SN-WYL" kind="relationship" relationship="rootViewController" id="MLk-7E-jwh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SF3-zE-nJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AccessoryButton@2x.png" width="62" height="63"/>
+        <image name="CardFrameInner.png" width="516" height="457"/>
+        <image name="CardFrameInner2.png" width="519" height="91"/>
+        <image name="Frame1.png" width="1182" height="1177"/>
+        <image name="Følelser.png" width="360" height="794"/>
+        <image name="Kærester.png" width="302" height="776"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
