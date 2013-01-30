@@ -23,7 +23,7 @@
         [self setMinimumLineSpacing:20];
         [self setSectionInset:UIEdgeInsetsMake(0, 10, 0, 10)];
         
-//        NSLog(@"Card size: %@", NSStringFromCGSize(self.itemSize));
+//        NSLog(@"Card size: %@", NSStringFromCGSize(self.itemSize));s
     }
     return self;
 }
